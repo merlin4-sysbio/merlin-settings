@@ -30,8 +30,8 @@ import es.uvigo.ei.aibench.core.operation.OperationDefinition;
 import es.uvigo.ei.aibench.workbench.InputGUI;
 import es.uvigo.ei.aibench.workbench.ParamsReceiver;
 import es.uvigo.ei.aibench.workbench.Workbench;
-import pt.uminho.ceb.biosystems.merlin.core.gui.CustomGUI;
-import pt.uminho.ceb.biosystems.merlin.core.utilities.CreateImageIcon;
+import pt.uminho.ceb.biosystems.merlin.aibench.gui.CustomGUI;
+import pt.uminho.ceb.biosystems.merlin.aibench.utilities.CreateImageIcon;
 import pt.uminho.ceb.biosystems.merlin.utilities.io.FileUtils;
 
 

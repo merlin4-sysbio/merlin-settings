@@ -1,7 +1,7 @@
 <plugin start="true">
 	<uid>merlin-settings</uid>
 	<name>pt.uminho.ceb.biosystems.merlin.settings</name>
-	<version>2.5.1</version>
+	<version>4.0.0</version>
 
 	<dependencies>
 		<dependency uid="merlin" />
@@ -20,7 +20,7 @@
 			name="aibench.workbench.view">
 			<icon-operation
 				operation="operations.DatabaseConfig.ID"
-				icon="icons/Lyfecycle/edit.png" />
+				icon="icons/Lifecycle/edit.png" />
 
 		</extension>
 
@@ -38,7 +38,7 @@
 			name="aibench.workbench.view">
 			<icon-operation
 				operation="operations.ReactionThresholdsConfig.ID"
-				icon="icons/Lyfecycle/edit.png" />
+				icon="icons/Lifecycle/edit.png" />
 
 		</extension>
 
@@ -56,7 +56,7 @@
 			name="aibench.workbench.view">
 			<icon-operation
 				operation="operations.EBiomassContentsConfig.ID"
-				icon="icons/Lyfecycle/edit.png" />
+				icon="icons/Lifecycle/edit.png" />
 
 		</extension>
 
@@ -74,7 +74,7 @@
 			name="aibench.workbench.view">
 			<icon-operation
 				operation="operations.TranspReactionsConfig.ID"
-				icon="icons/Lyfecycle/edit.png" />
+				icon="icons/Lifecycle/edit.png" />
 
 
 		</extension>
@@ -92,7 +92,7 @@
 		<extension uid="aibench.workbench"
 			name="aibench.workbench.view">
 			<icon-operation operation="operations.GPRConfig.ID"
-				icon="icons/Lyfecycle/edit.png" />
+				icon="icons/Lifecycle/edit.png" />
 
 		</extension>
 		<extension uid="aibench.workbench"
