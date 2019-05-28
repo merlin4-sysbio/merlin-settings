@@ -60,25 +60,7 @@
 
 		</extension>
 
-		<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-
-		<extension uid="aibench.core"
-			name="aibench.core.operation-definition"
-			class="pt.ceb.biosystems.merlin.merlin_settings.TranspReactionsConfigSettings">
-			<operation-description
-				name="create transport reactions configuration" path="40@help/"
-				uid="operations.TranspReactionsConfig.ID" />
-		</extension>
-
-		<extension uid="aibench.workbench"
-			name="aibench.workbench.view">
-			<icon-operation
-				operation="operations.TranspReactionsConfig.ID"
-				icon="icons/Lifecycle/edit.png" />
-
-
-		</extension>
-
+		
 		<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
 		<extension uid="aibench.core"
