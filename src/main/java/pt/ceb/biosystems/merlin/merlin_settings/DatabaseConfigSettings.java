@@ -88,8 +88,6 @@ public class DatabaseConfigSettings {
 		
 		String path = FileUtils.getConfFolderPath().concat("database_settings.conf");
 		
-		System.out.println("Angola " + path);
-
 		ArrayList<String> listLines= new ArrayList<>(); 
 		File configFile= new File(path); 
 		try {
