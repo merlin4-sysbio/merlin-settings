@@ -1,34 +1,25 @@
 package pt.ceb.biosystems.merlin.merlin_settings;
 
 import java.awt.Component;
-import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
-import javax.swing.AbstractAction;
+
 import javax.swing.ImageIcon;
 import javax.swing.InputMap;
 import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 
 import org.sing_group.gc4s.dialog.AbstractInputJDialog;
 import org.sing_group.gc4s.input.InputParameter;
 import org.sing_group.gc4s.input.InputParametersPanel;
-import org.sing_group.gc4s.input.combobox.ExtendedJComboBox;
-import org.sing_group.gc4s.ui.icons.Icons;
-import org.sing_group.gc4s.utilities.builder.JButtonBuilder;
-import org.sing_group.gc4s.visualization.VisualizationUtils;
 
 import es.uvigo.ei.aibench.core.ParamSpec;
 import es.uvigo.ei.aibench.core.operation.OperationDefinition;
@@ -57,11 +48,11 @@ public class EBiomassContentsConfigGUI extends AbstractInputJDialog implements I
 	}
 
 	public String getDialogTitle() {
-		return "EBiomass Contents Settings";
+		return "manual e-biomass contents settings";
 	}
 
 	public String getDescription() {
-		return "Change merlin e-biomass equation contents in the configuration file.";
+		return "change manual e-biomass equation default contents";
 	}
 
 	public JPanel getInputComponentsPane() {
@@ -115,7 +106,7 @@ public class EBiomassContentsConfigGUI extends AbstractInputJDialog implements I
 			String[] options = new String[2];
 			options[0] = "yes";
 			options[1] = "no";
-			int result = CustomGUI.stopQuestion("Cancel Confirmation", "Are you sure you want to cancel the operation?", options);
+			int result = CustomGUI.stopQuestion("cancel confirmation", "are you sure you want to cancel the operation?", options);
 
 			if (result == 0) {
 				canceled = true;
@@ -139,44 +130,44 @@ public class EBiomassContentsConfigGUI extends AbstractInputJDialog implements I
 		InputParameter[] parameters = new InputParameter[6];
 		parameters[0] = 
 				new InputParameter(
-						"Protein contents", 
+						"protein contents", 
 						proteincontents, 
-						"Insert protein contents"
+						"insert protein contents"
 						);
 
 		parameters[1] = 
 				new InputParameter(
 						"DNA contents", 
 						dnacontents, 
-						"Insert DNA contents"
+						"insert DNA contents"
 						);
 
 		parameters[2] = 
 				new InputParameter(
 						"RNA contents", 
 						rnacontents, 
-						"Insert RNA contents"
+						"insert RNA contents"
 						);
 
 		parameters[3] = 
 				new InputParameter(
 						"mRNA contents", 
 						mrnacontents, 
-						"Insert mRNA contents"
+						"insert mRNA contents"
 						);
 
 		parameters[4] = 
 				new InputParameter(
 						"tRNA contents", 
 						trnacontents, 
-						"Insert tRNA contents"
+						"insert tRNA contents"
 						);
 
 		parameters[5] = 
 				new InputParameter(
 						"rRNA contents", 
 						rrnacontents, 
-						"Insert rRNA contents"
+						"insert rRNA contents"
 						);
 
 

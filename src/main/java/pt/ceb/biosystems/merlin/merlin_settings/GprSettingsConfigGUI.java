@@ -4,8 +4,6 @@ import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -16,7 +14,6 @@ import javax.swing.InputMap;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 
@@ -60,11 +57,11 @@ public class GprSettingsConfigGUI extends AbstractInputJDialog implements InputG
 	}
 
 	public String getDialogTitle() {
-		return "GPR Settings";
+		return "gene-protein-reaction rules settings";
 	}
 
 	public String getDescription() {
-		return "Change merlin GPR rules settings in the configuration file.";
+		return "change merlin's gene-protein-reaction rules settings in the configuration file";
 	}
 
 	public JPanel getInputComponentsPane() {
@@ -109,14 +106,14 @@ public class GprSettingsConfigGUI extends AbstractInputJDialog implements InputG
 		okButton.addActionListener(listener);
 
 		cancelButton = new JButton("cancel");
-		cancelButton.setToolTipText("Cancel");
+		cancelButton.setToolTipText("cancel");
 		cancelButton.setIcon(new CreateImageIcon(new ImageIcon(getClass().getClassLoader().getResource("icons/Cancel.png")),0.1).resizeImageIcon());
 		cancelButton.addActionListener(event -> {
 			String[] options = new String[2];
 			options[0]="yes";
 			options[1]="no";
 
-			int result=CustomGUI.stopQuestion("Cancel confirmation", "Are you sure you want to cancel the operation?", options);
+			int result=CustomGUI.stopQuestion("cancel confirmation", "are you sure you want to cancel the operation?", options);
 
 			if(result==0) {
 				canceled = true;
@@ -141,68 +138,68 @@ public class GprSettingsConfigGUI extends AbstractInputJDialog implements InputG
 		InputParameter[] parameters = new InputParameter[10];
 		parameters[0] = 
 				new InputParameter(
-						"Similarity threshold", 
+						"other organisms similarity threshold", 
 						similarity, 
-						"Insert similarity threshold"
+						"insert other organisms similarity threshold"
 						);
 
 		parameters[1] = 
 				new InputParameter(
-						"Reference taxonomy threshold", 
+						"reference organism similarity threshold", 
 						reference_taxo, 
-						"Insert reference taxo threshold"
+						"insert reference organism similarity threshold"
 						);
 		parameters[2] = 
 				new InputParameter(
-						"Compare to full genome", 
+						"assess whole genome", 
 						compareToFullGenome, 
-						"Select true or false"
+						"align with whole genome, or just metabolic genes"
 						);
 
 		parameters[3] = 
 				new InputParameter(
-						"Identify GPRs", 
+						"identify gene-protein-reaction rules", 
 						identifyGPRs, 
-						"Select true or false"
+						"search for the rules in the reference organism"
 						);
 		parameters[4] = 
 				new InputParameter(
-						"Generate GPRs", 
+						"create gene-protein-reaction rules", 
 						generateGPRs, 
-						"Select true or false"
+						"create the rules for integration in the model"
 						);
 
 		parameters[5] = 
 				new InputParameter(
-						"Keep reactions with notes", 
+						"keep reactions with notes", 
 						keepReactionsWithNotes, 
-						"Select true or false"
+						"do not remove reactions with notes"
 						);
 		parameters[6] = 
 				new InputParameter(
-						"Keep manual reactions", 
+						"keep manual reactions", 
 						keepManualReactions, 
-						"Select true or false"
+						"do not remove manully inserted reactions"
 						);
 
 		parameters[7] = 
 				new InputParameter(
-						"Integrate to database", 
+						"integrate reactions in the model", 
 						integrateToDatabase, 
-						"Select true or false"
+						"insert the rules in the model"
 						);
 		parameters[8] = 
 				new InputParameter(
-						"Threshold", 
+						"integration similarity threshold", 
 						threshold, 
-						"Insert threshold"
+						"insert similarity threshold to integrate rules"
 						);
 
 		parameters[9] = 
 				new InputParameter(
-						"Remove reactions", 
+						"allow removing reactions", 
 						removeReactions, 
-						"Select true or false"
+						"allow removing reactions not complying with rules"
 						);
 
 		return parameters;

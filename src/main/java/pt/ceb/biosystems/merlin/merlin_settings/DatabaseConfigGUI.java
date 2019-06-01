@@ -4,8 +4,6 @@ import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -56,11 +54,11 @@ public class DatabaseConfigGUI extends AbstractInputJDialog implements InputGUI{
 	}
 
 	public String getDialogTitle() {
-		return "Database Settings";
+		return "database settings";
 	}
 
 	public String getDescription() {
-		return "Change database settings in the configuration file.";
+		return "change database settings in the configuration file";
 	}
 
 	public JPanel getInputComponentsPane() {
@@ -73,7 +71,7 @@ public class DatabaseConfigGUI extends AbstractInputJDialog implements InputGUI{
 
 		okButton = new JButton("save");
 		okButton.setEnabled(true);
-		okButton.setToolTipText("Save");
+		okButton.setToolTipText("save");
 		okButton.setIcon(new CreateImageIcon(new ImageIcon(getClass().getClassLoader().getResource("icons/Save.png")),0.1).resizeImageIcon());
 		ActionListener listener= new ActionListener() {
 
@@ -111,7 +109,7 @@ public class DatabaseConfigGUI extends AbstractInputJDialog implements InputGUI{
 		okButton.addActionListener(listener);
 
 		cancelButton = new JButton("cancel");
-		cancelButton.setToolTipText("Cancel");
+		cancelButton.setToolTipText("cancel");
 		cancelButton.setIcon(new CreateImageIcon(new ImageIcon(getClass().getClassLoader().getResource("icons/Cancel.png")),0.1).resizeImageIcon());
 		cancelButton.addActionListener(event -> {
 
@@ -119,7 +117,7 @@ public class DatabaseConfigGUI extends AbstractInputJDialog implements InputGUI{
 			options[0] = "yes";
 			options[1] = "no";
 
-			int result = CustomGUI.stopQuestion("Cancel confirmation", "Are you sure you want to cancel the operation?", options);
+			int result = CustomGUI.stopQuestion("cancel confirmation", "are you sure you want to cancel the operation?", options);
 
 			if(result == 0) {
 				canceled = true;
@@ -164,34 +162,34 @@ public class DatabaseConfigGUI extends AbstractInputJDialog implements InputGUI{
 		InputParameter[] parameters = new InputParameter[5];
 		parameters[0] = 
 				new InputParameter(
-						"Database Type", 
+						"database type", 
 						dbType, 
-						"Choose database type"
+						"select database type"
 						);
 
 		parameters[1] = 
 				new InputParameter(
-						"Username", 
+						"username", 
 						username, 
-						"Insert username"
+						"set username"
 						);
 		parameters[2] = 
 				new InputParameter(
-						"Password", 
+						"password", 
 						password, 
-						"Insert password"
+						"set password"
 						);
 		parameters[3] = 
 				new InputParameter(
-						"Host", 
+						"host", 
 						host, 
-						"Insert host"
+						"set host"
 						);
 		parameters[4] = 
 				new InputParameter(
-						"Port", 
+						"port", 
 						port, 
-						"Insert port"
+						"set port"
 						);
 
 

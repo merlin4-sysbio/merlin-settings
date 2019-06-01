@@ -1,34 +1,25 @@
 package pt.ceb.biosystems.merlin.merlin_settings;
 
 import java.awt.Component;
-import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
-import javax.swing.AbstractAction;
+
 import javax.swing.ImageIcon;
 import javax.swing.InputMap;
 import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 
 import org.sing_group.gc4s.dialog.AbstractInputJDialog;
 import org.sing_group.gc4s.input.InputParameter;
 import org.sing_group.gc4s.input.InputParametersPanel;
-import org.sing_group.gc4s.input.combobox.ExtendedJComboBox;
-import org.sing_group.gc4s.ui.icons.Icons;
-import org.sing_group.gc4s.utilities.builder.JButtonBuilder;
-import org.sing_group.gc4s.visualization.VisualizationUtils;
 
 import es.uvigo.ei.aibench.core.ParamSpec;
 import es.uvigo.ei.aibench.core.operation.OperationDefinition;
@@ -53,11 +44,11 @@ public class ReactionThresholdsConfigGUI extends AbstractInputJDialog implements
 	}
 
 	protected String getDialogTitle() {
-		return "Reaction Thresholds Settings";
+		return "find genes threshold's settings";
 	}
 
 	protected String getDescription() {
-		return "Change merlin reactions thresholds in the configuration file.";
+		return "change default thresholds";
 	}
 
 	public JPanel getInputComponentsPane() {
@@ -97,7 +88,7 @@ public class ReactionThresholdsConfigGUI extends AbstractInputJDialog implements
 		okButton.addActionListener(listener);
 
 		cancelButton = new JButton("cancel");
-		cancelButton.setToolTipText("Cancel");
+		cancelButton.setToolTipText("cancel");
 		cancelButton.setIcon(new CreateImageIcon(new ImageIcon(getClass().getClassLoader().getResource("icons/Cancel.png")),0.1).resizeImageIcon());
 		cancelButton.addActionListener(event -> {
 			
@@ -105,7 +96,7 @@ public class ReactionThresholdsConfigGUI extends AbstractInputJDialog implements
 			options[0] = "yes";
 			options[1] = "no";
 			
-			int result = CustomGUI.stopQuestion("Cancel confirmation", "Are you sure you want to cancel the operation?", options);
+			int result = CustomGUI.stopQuestion("cancel confirmation", "are you sure you want to cancel the operation?", options);
 			
 			if(result == 0) {
 				canceled = true;
@@ -130,16 +121,16 @@ public class ReactionThresholdsConfigGUI extends AbstractInputJDialog implements
 		InputParameter[] parameters = new InputParameter[2];
 		parameters[0] = 
 				new InputParameter(
-						"Similarity threshold", 
+						"other organisms", 
 						similarity, 
-						"Insert similarity threshold"
+						"insert other organisms similarity threshold"
 						);
 	
 		parameters[1] = 
 				new InputParameter(
-						"Reference taxo threshold", 
+						"reference organism", 
 						reference_taxo, 
-						"Insert reference taxo threshold"
+						"insert reference organism similarity threshold"
 						);
 		
 		return parameters;
