@@ -140,7 +140,6 @@ public class DatabaseConfigGUI extends AbstractInputJDialog implements InputGUI{
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				// TODO Auto-generated method stub
 				if(dbType.getSelectedItem().toString().equals("MySQL")) {
 					fillWithoutDbMySQL();
 				}else {
@@ -208,7 +207,6 @@ public class DatabaseConfigGUI extends AbstractInputJDialog implements InputGUI{
 			}
 			file.close();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -252,7 +250,6 @@ public class DatabaseConfigGUI extends AbstractInputJDialog implements InputGUI{
 			}
 			file.close();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -298,7 +295,6 @@ public class DatabaseConfigGUI extends AbstractInputJDialog implements InputGUI{
 			}
 			file.close();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -346,7 +342,6 @@ public class DatabaseConfigGUI extends AbstractInputJDialog implements InputGUI{
 
 	@Override
 	public void finish() {
-		// TODO Auto-generated method stub
 
 	}
 }
