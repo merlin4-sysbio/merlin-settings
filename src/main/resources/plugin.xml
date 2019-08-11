@@ -12,7 +12,7 @@
 			name="aibench.core.operation-definition"
 			class="pt.ceb.biosystems.merlin.merlin_settings.DatabaseConfigSettings">
 			<operation-description
-				name="database" path="40@settings/"
+				name="database" path="50@settings/"
 				uid="operations.DatabaseConfig.ID" />
 		</extension>
 
@@ -30,7 +30,7 @@
 			name="aibench.core.operation-definition"
 			class="pt.ceb.biosystems.merlin.merlin_settings.ReactionThresholdsSettings">
 			<operation-description
-				name="find genes thresholds" path="40@settings/"
+				name="find genes thresholds" path="50@settings/"
 				uid="operations.ReactionThresholdsConfig.ID" />
 		</extension>
 
@@ -48,7 +48,7 @@
 			name="aibench.core.operation-definition"
 			class="pt.ceb.biosystems.merlin.merlin_settings.EBiomassContentsSettings">
 			<operation-description
-				name="ebiomass contents" path="40@settings/"
+				name="ebiomass contents" path="50@settings/"
 				uid="operations.EBiomassContentsConfig.ID" />
 		</extension>
 
@@ -67,7 +67,7 @@
 			name="aibench.core.operation-definition"
 			class="pt.ceb.biosystems.merlin.merlin_settings.GPRConfigSettings">
 			<operation-description
-				name="gpr rules" path="40@settings/"
+				name="gpr rules" path="50@settings/"
 				uid="operations.GPRConfig.ID" />
 		</extension>
 
