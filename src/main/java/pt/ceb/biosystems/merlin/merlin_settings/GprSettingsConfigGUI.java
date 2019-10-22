@@ -109,16 +109,16 @@ public class GprSettingsConfigGUI extends AbstractInputJDialog implements InputG
 		cancelButton.setToolTipText("cancel");
 		cancelButton.setIcon(new CreateImageIcon(new ImageIcon(getClass().getClassLoader().getResource("icons/Cancel.png")),0.1).resizeImageIcon());
 		cancelButton.addActionListener(event -> {
-			String[] options = new String[2];
-			options[0]="yes";
-			options[1]="no";
-
-			int result=CustomGUI.stopQuestion("cancel confirmation", "are you sure you want to cancel the operation?", options);
-
-			if(result==0) {
+//			String[] options = new String[2];
+//			options[0]="yes";
+//			options[1]="no";
+//
+//			int result=CustomGUI.stopQuestion("cancel confirmation", "are you sure you want to cancel the operation?", options);
+//
+//			if(result==0) {
 				canceled = true;
 				dispose();
-			}
+//			}
 
 		});
 
