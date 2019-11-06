@@ -1,7 +1,7 @@
 <plugin start="true">
-	<uid>merlin-settings</uid>
-	<name>pt.uminho.ceb.biosystems.merlin.settings</name>
-	<version>4.0.0</version>
+	<uid>pt.uminho.ceb.biosystems.merlin.settings</uid>
+	<name>merlin-settings</name>
+	<version>4.0.2</version>
 
 	<dependencies>
 		<dependency uid="merlin" />
