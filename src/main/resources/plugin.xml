@@ -20,7 +20,7 @@
 			name="aibench.workbench.view">
 			<icon-operation
 				operation="operations.DatabaseConfig.ID"
-				icon="icons/Lifecycle/edit.png" />
+				icon="icons/Lifecycle/database_icon.png" />
 
 		</extension>
 
@@ -38,7 +38,7 @@
 			name="aibench.workbench.view">
 			<icon-operation
 				operation="operations.ReactionThresholdsConfig.ID"
-				icon="icons/Lifecycle/edit.png" />
+				icon="icons/Lifecycle/setting.png" />
 
 		</extension>
 
@@ -56,7 +56,7 @@
 			name="aibench.workbench.view">
 			<icon-operation
 				operation="operations.EBiomassContentsConfig.ID"
-				icon="icons/Lifecycle/edit.png" />
+				icon="icons/Lifecycle/setting.png" />
 
 		</extension>
 
@@ -74,7 +74,7 @@
 		<extension uid="aibench.workbench"
 			name="aibench.workbench.view">
 			<icon-operation operation="operations.GPRConfig.ID"
-				icon="icons/Lifecycle/edit.png" />
+				icon="icons/Lifecycle/setting.png" />
 
 		</extension>
 		<extension uid="aibench.workbench"
@@ -100,6 +100,10 @@
 		</extension>
 		<extension uid="aibench.workbench"
 			name="aibench.workbench.view">
+<<<<<<< HEAD
+=======
+			<menu-icon menu="settings" icon="conf/icons/settings_icon.png" />
+>>>>>>> 77ea8e23d4fbe2ccbcb400f456c1e4b1d31a98ca
 			<menu-icon menu="settings/tools configutarions" icon="conf/icons/tools.png" />
 		</extension>
 	</extensions>
