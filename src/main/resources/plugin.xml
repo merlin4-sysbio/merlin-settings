@@ -100,7 +100,6 @@
 		</extension>
 		<extension uid="aibench.workbench"
 			name="aibench.workbench.view">
-			<menu-icon menu="settings" icon="conf/icons/settings_icon.png" />
 			<menu-icon menu="settings/tools configutarions" icon="conf/icons/tools.png" />
 		</extension>
 	</extensions>
