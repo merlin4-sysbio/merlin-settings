@@ -135,7 +135,6 @@ public class GPRConfigSettings {
 			if (similarity.matches(validation) && reference_taxo.matches(validation) && threshold.matches(validation)) {
 
 				String path = FileUtils.getConfFolderPath().concat("gpr_settings.conf");
-				System.out.println(path);
 
 				ArrayList<String> listLines= new ArrayList<>(); 
 				File configFile= new File(path); 

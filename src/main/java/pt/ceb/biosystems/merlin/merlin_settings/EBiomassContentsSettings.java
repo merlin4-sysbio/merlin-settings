@@ -99,7 +99,6 @@ public class EBiomassContentsSettings {
 				&& trnacontents.matches(validation) && rrnacontents.matches(validation)) {
 
 		String path = FileUtils.getConfFolderPath().concat("ebiomass_contents.conf");
-		System.out.println(path);
 
 		ArrayList<String> listLines= new ArrayList<>(); 
 		File configFile= new File(path); 

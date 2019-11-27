@@ -61,7 +61,6 @@ public class TranspReactionsConfigSettings {
 		if (alphaValue.matches(validation) && cutoffThreshold.matches(validation)) {
 
 		String path = FileUtils.getConfFolderPath().concat("transp_reactions_settings.conf");
-		System.out.println(path);
 
 		ArrayList<String> listLines= new ArrayList<>(); 
 		File configFile= new File(path); 

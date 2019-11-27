@@ -110,7 +110,6 @@ public class DatabaseConfigSettings {
 					listLines.add(i, newline);
 				}
 				if(listLines.get(i).startsWith("password")) {
-					System.out.println(this.password);
 					String newline = "password: ".concat(this.password.trim());
 					listLines.remove(i);
 					listLines.add(i, newline);
@@ -184,7 +183,6 @@ public class DatabaseConfigSettings {
 			
 		
 		String path = FileUtils.getConfFolderPath().concat("database_settings.conf");
-		System.out.println(path);
 
 		ArrayList<String> listLines= new ArrayList<>(); 
 		File configFile= new File(path); 
@@ -208,7 +206,6 @@ public class DatabaseConfigSettings {
 					listLines.add(i, newline);
 				}
 				if(listLines.get(i).startsWith("password")) {
-					System.out.println(this.password);
 					String newline = "password: ".concat(this.password.trim());
 					listLines.remove(i);
 					listLines.add(i, newline);
