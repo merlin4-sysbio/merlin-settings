@@ -11,6 +11,7 @@ import java.util.regex.Pattern;
 import es.uvigo.ei.aibench.core.operation.annotation.Direction;
 import es.uvigo.ei.aibench.core.operation.annotation.Operation;
 import es.uvigo.ei.aibench.core.operation.annotation.Port;
+import es.uvigo.ei.aibench.workbench.Workbench;
 import pt.uminho.ceb.biosystems.merlin.utilities.io.FileUtils;
 
 @Operation(name="HeapSpaceSettings",description= "Set heap space size")
@@ -35,11 +36,10 @@ public class HeapSpaceSettings {
 			file.close();
 
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+			Workbench.getInstance().error(e);
 			e.printStackTrace();
 		}
 		int i = 0;
-		boolean go = true;
 		
 		while (i < listLines.size()) { 
 			
@@ -67,9 +67,14 @@ public class HeapSpaceSettings {
 		PrintWriter confFile = new PrintWriter(path); 
 		for (String line : listLines) {
 			confFile.println(line);
-
-
 		}
 		confFile.close();
 }
+	
+//	@Port(direction = Direction.INPUT, name="reboot",	description="", order = 2)
+//	public void setSize (boolean reboot) throws Exception{
+//		
+//		if(reboot)
+//			Util.restart();
+//	}
 }
