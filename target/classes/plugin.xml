@@ -1,0 +1,132 @@
+<plugin start="true">
+	<uid>pt.uminho.ceb.biosystems.merlin.settings</uid>
+	<name>merlin-settings</name>
+	<version>4.0.3</version>
+
+	<dependencies>
+		<dependency uid="merlin" />
+	</dependencies>
+
+	<extensions>
+		<extension uid="aibench.core"
+			name="aibench.core.operation-definition"
+			class="pt.ceb.biosystems.merlin.merlin_settings.DatabaseConfigSettings">
+			<operation-description
+				name="database configuration" path="50@settings/"
+				uid="operations.DatabaseConfig.ID" />
+		</extension>
+
+		<extension uid="aibench.workbench"
+			name="aibench.workbench.view">
+			<icon-operation
+				operation="operations.DatabaseConfig.ID"
+				icon="icons/Lifecycle/database_icon.png" />
+
+		</extension>
+
+		<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+		<extension uid="aibench.core"
+			name="aibench.core.operation-definition"
+			class="pt.ceb.biosystems.merlin.merlin_settings.ReactionThresholdsSettings">
+			<operation-description
+				name="find genes thresholds"
+				path="50@settings/10@tools configutarions"
+				uid="operations.ReactionThresholdsConfig.ID" />
+		</extension>
+
+		<extension uid="aibench.workbench"
+			name="aibench.workbench.view">
+			<icon-operation
+				operation="operations.ReactionThresholdsConfig.ID"
+				icon="icons/Lifecycle/setting.png" />
+
+		</extension>
+
+		<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+		<extension uid="aibench.core"
+			name="aibench.core.operation-definition"
+			class="pt.ceb.biosystems.merlin.merlin_settings.EBiomassContentsSettings">
+			<operation-description name="ebiomass contents"
+				path="50@settings/20@tools configutarions"
+				uid="operations.EBiomassContentsConfig.ID" />
+		</extension>
+
+		<extension uid="aibench.workbench"
+			name="aibench.workbench.view">
+			<icon-operation
+				operation="operations.EBiomassContentsConfig.ID"
+				icon="icons/Lifecycle/setting.png" />
+
+		</extension>
+
+
+		<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+
+		<extension uid="aibench.core"
+			name="aibench.core.operation-definition"
+			class="pt.ceb.biosystems.merlin.merlin_settings.system.HeapSpaceSettings">
+			<operation-description
+				name="System preferences" path="50@settings/"
+				uid="operations.HeapSpaceSettings.ID" />
+		</extension>
+
+		<extension uid="aibench.workbench"
+			name="aibench.workbench.view">
+			<icon-operation
+				operation="operations.HeapSpaceSettings.ID"
+				icon="icons/Lifecycle/setting.png" />
+
+		</extension>
+		<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+		<extension uid="aibench.core"
+			name="aibench.core.operation-definition"
+			class="pt.ceb.biosystems.merlin.merlin_settings.GPRConfigSettings">
+			<operation-description name="gpr rules"
+				path="50@settings/30@tools configutarions"
+				uid="operations.GPRConfig.ID" />
+		</extension>
+
+		<extension uid="aibench.workbench"
+			name="aibench.workbench.view">
+			<icon-operation operation="operations.GPRConfig.ID"
+				icon="icons/Lifecycle/setting.png" />
+
+		</extension>
+		<extension uid="aibench.workbench"
+			name="aibench.workbench.view">
+
+			<gui-operation operation="operations.DatabaseConfig.ID"
+				class="pt.ceb.biosystems.merlin.merlin_settings.DatabaseConfigGUI" />
+
+			<gui-operation
+				operation="operations.ReactionThresholdsConfig.ID"
+				class="pt.ceb.biosystems.merlin.merlin_settings.ReactionThresholdsConfigGUI" />
+
+			<gui-operation
+				operation="operations.EBiomassContentsConfig.ID"
+				class="pt.ceb.biosystems.merlin.merlin_settings.EBiomassContentsConfigGUI" />
+
+			<gui-operation
+				operation="operations.TranspReactionsConfig.ID"
+				class="pt.ceb.biosystems.merlin.merlin_settings.TranspReactionsConfigGUI" />
+
+			<gui-operation operation="operations.GPRConfig.ID"
+				class="pt.ceb.biosystems.merlin.merlin_settings.GprSettingsConfigGUI" />
+
+			<gui-operation
+				operation="operations.HeapSpaceSettings.ID"
+				class="pt.ceb.biosystems.merlin.merlin_settings.system.HeapSpaceSettingsGUI" />
+		</extension>
+
+		<extension uid="aibench.workbench"
+			name="aibench.workbench.view">
+			<menu-icon menu="settings/tools configutarions"
+				icon="conf/icons/tools.png" />
+		</extension>
+	</extensions>
+
+</plugin>
